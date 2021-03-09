@@ -1,5 +1,3 @@
-# Terraform configuration
-
 terraform {
   required_providers {
     aws = {
@@ -9,7 +7,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
 
 module "vpc" {
@@ -27,7 +25,8 @@ module "vpc" {
 
   tags = var.vpc_tags
 }
-*/
+
+/*
 module "ec2_instances" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "2.12.0"
@@ -45,5 +44,4 @@ module "ec2_instances" {
     Environment = "dev"
   }
 }
-    
-/*
+*/
